@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+    text-align: center;
+}
+
+.board {
+    width: 320px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: relative;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    background: #1e293b;
+    border-radius: 14px;
+    font-size: 64px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: #334155;
+}
+
+
+.win-line {
+    position: absolute;
+    background: #38bdf8;
+}
+
+
+.row-0 { top: 16%; left: 5%; width: 90%; height: 4px; }
+.row-1 { top: 50%; left: 5%; width: 90%; height: 4px; }
+.row-2 { top: 84%; left: 5%; width: 90%; height: 4px; }
+
+
+.col-0 { left: 16%; top: 5%; height: 90%; width: 4px; }
+.col-1 { left: 50%; top: 5%; height: 90%; width: 4px; }
+.col-2 { left: 84%; top: 5%; height: 90%; width: 4px; }
+
+
+.diag-0 {
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    transform: rotate(45deg);
+}
+
+.diag-1 {
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    transform: rotate(-45deg);
+}
+
+button, select {
+    padding: 8px 16px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: none;
+}
